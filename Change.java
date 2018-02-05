@@ -14,14 +14,14 @@ public class Change {
 		
 		//Prompt for Change
 		System.out.println("Enter Change");
-		Integer Change = input.nextInt();
-		Integer Quarters = (Change/25);
-		Integer Change2 = (Change%25);
-		Integer Dime = (Change2/10);
-		Integer Change3 = (Change2%10);
-		Integer Nickel = (Change3/5);
-		Integer Change4 = (Change3%5);
-		Integer Pennies = (Change4/1);
+		int Change = input.nextInt();
+		int Quarters = (Change/25);
+		Change %= 25;
+		int Dime = (Change/10);
+		Change %= 10;
+		int Nickel = (Change/5);
+		Change %= 5;
+		int Pennies = (Change/1);
 		
 		System.out.println("Quarters= "+Quarters);
 		System.out.println("Dimes= "+Dime);
