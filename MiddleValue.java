@@ -21,17 +21,16 @@ public class MiddleValue {
 		
 		//Output the middle value
 		if (varA > varB) {
-			if (varB > varC) {
-				System.out.println(varB + " is the middle value");
-				if (varA > varC) {
-					System.out.println(varC + " is the middle value");
-				
-				
-					System.out.println(varA + "is the middle value");
-			}
-				
-			}
+			if (varB > varC) 
+				System.out.println("B is the middle value with " + varB);
+			else 
+				System.out.println("C is the middle value with " + varC);
 		}
+		else
+			if (varA > varC)
+				System.out.println("A is the middle value with "+ varA);
+			else
+				System.out.println("C is the middle value with " + varC);
 	}
 
 }
