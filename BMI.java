@@ -12,18 +12,34 @@ public class BMI {
 	Scanner input = new Scanner(System.in);
 	
 	//Prompt for Height
+	System.out.println("Enter your Height in feet");
+	double heightFeet = input.nextDouble();
+	
 	System.out.println("Enter your Height in inches >");
-	double Height = input.nextDouble();
+	double heightInch = input.nextDouble();
+	
+	//combine heights
+	double height = (heightFeet * 12) + heightInch;
+	
 	//Prompt for Weight
 	System.out.println("Enter your Weight in pounds >");
-	double Weight = input.nextDouble();
+	double weight = input.nextDouble();
 	
 	//Convert to Metric
-	double Meters = (Height*.0254);
-	double Kilograms = (Weight*.45359237);
+	double meters = (height*.0254);
+	double kilograms = (weight*.45359237);
+	
 	//Calculate BMI
-	double Bmi= (Kilograms/(Meters*Meters));
-	System.out.println("Your BMI is "+Bmi);
+	double bmi= (kilograms/(meters*meters));
+	System.out.println("Your BMI is "+bmi);
+	if (bmi < 18.5) {
+		System.out.println("You are underweight");
+	}else if (bmi >= 18.5 && bmi < 25) {
+		System.out.println("you are at a normal weight");
+	}else if (bmi >= 25 && bmi < 30) {
+		System.out.println("You are overweight");
+	}else if (bmi >= 30) 
+		System.out.println("You are obese");
 	
 	}
 

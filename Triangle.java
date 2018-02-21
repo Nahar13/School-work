@@ -10,23 +10,29 @@ import java.util.Scanner;
 public class Triangle {
 
 	public static void main(String[] args) {
-	Scanner input = new Scanner(System.in);
-	//Prompt for the sides
-	System.out.println("Enter Side A");
-	double sideA = input.nextDouble();
-	System.out.println("Enter Side B");
-	double sideB = input.nextDouble();
-	System.out.println("Enter Side C");
-	double sideC = input.nextDouble();
-	
-	if (sideA <= (sideB + sideC)) {
-		if (sideB <= sideA + sideC) {
-			if (sideC <= sideA + sideB) {
-				System.out.println((sideA + sideB + sideC));
-			}else System.out.println("Invalid");
-		}else System.out.println("Invalid");{
+		Scanner input = new Scanner(System.in);
+		
+		//Prompt for the sides
+		System.out.println("Enter Side A");
+		double sideA = input.nextDouble();
+		System.out.println("Enter Side B");
+		double sideB = input.nextDouble();
+		System.out.println("Enter Side C");
+		double sideC = input.nextDouble();
+		
+		//Output the perimeter of the triangle as long as none of the sides are longer than the other two combined.		
+		if (sideA <= (sideB + sideC)) {
+			if (sideB <= sideA + sideC) { 
+				if (sideC <= sideA + sideB) 
+					System.out.println((sideA + sideB + sideC + " is the perimiter"));
+				else 
+					System.out.println("Invalid");
+			}
+			else 
+				System.out.println("Invalid");
 		}
-	}else System.out.println("Invalid");
-	}
+		else 
+			System.out.println("Invalid");
+	}	
 }
 

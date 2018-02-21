@@ -18,19 +18,29 @@ public class MiddleValue {
 		int varB = input.nextInt();
 		System.out.println("Enter Variable C");
 		int varC = input.nextInt();
-		
 		//Output the middle value
-		if (varA > varB) {
+		if  (varA > varB && varA > varC) {
 			if (varB > varC) 
-				System.out.println("B is the middle value with " + varB);
+              System.out.println("B is the middle value with " + varB);
 			else 
-				System.out.println("C is the middle value with " + varC);
-		}
+              System.out.println("C is the middle value with " + varC);
+		}	
 		else
+		if (varB > varA && varB > varC)
 			if (varA > varC)
-				System.out.println("A is the middle value with "+ varA);
-			else
+				System.out.println("A is the middle value with " + varA);
+			else {
 				System.out.println("C is the middle value with " + varC);
+				}
+		else
+			if (varC > varA && varC > varB)
+				if (varA > varB)
+					System.out.println("A is the middle value with " + varA);
+			else {
+					System.out.println("B is the middle value with " + varB);
+					}
+				
+		
 	}
 
 }
