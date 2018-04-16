@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class TempConversion {
 
-	public static void main(String[] args) {
+	public static double main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
 		//Prompt for Celsius to Fahrenheit or Fahrenheit Celsius
@@ -23,15 +23,13 @@ public class TempConversion {
 		case  1://Prompt for Celsius.
 			System.out.println("Temperature?");
 			double c = input.nextDouble();
+			double cel = celsius(c);
 			
-			// Conversion Formula for Celsius to Fahrenheit
-			double f = ((9.0/5.0) * c + 32);
-			System.out.println("The temperature is "+ f +"degrees fahrenheit.");
 			break;
 			
 		case 2://Prompt for fahrenheit
 			System.out.println("Temperature?");
-			f = input.nextDouble();
+			double f = input.nextDouble();
 			
 			//Conversion formula for fahrenheit
 			c = (5.0/9) *(f - 32);
@@ -43,14 +41,14 @@ public class TempConversion {
 		}		
 		
 		//Method for C to F
-		public static double celsius(double c) {
-			double f = ((9.0/5.0) * c + 32);
-			System.out.println("The temperature is "+ f +"degrees fahrenheit.");
+		public static double celsius (double num1) {
+			double f = ((9.0/5.0) * num1 + 32);
+			return f;
 		}	
 		//Method for F to C
-		public static double fahrenheit(double f) {
-			c = (5.0/9) *(f - 32);
-			System.out.println("The temperature is "+ c + " degrees celsius.");
+		public static double fahrenheit (double num2) {
+			double c = (5.0/9) *(num2 - 32);
+			return c;
 		}
 		
 	}
