@@ -10,8 +10,19 @@ import java.util.Scanner;
  */
 
 public class TempConversion {
-
-	public static double main(String[] args) {
+	
+	//Method for C to F
+			public static double celsius(double num1) {
+				double f = ((9.0/5.0) * num1 + 32);
+				return f;
+			}	
+			//Method for F to C
+			public static double fahrenheit(double num2) {
+				double c = (5.0/9) *(num2 - 32);
+				return c;
+			}
+			
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
 		//Prompt for Celsius to Fahrenheit or Fahrenheit Celsius
@@ -23,7 +34,8 @@ public class TempConversion {
 		case  1://Prompt for Celsius.
 			System.out.println("Temperature?");
 			double c = input.nextDouble();
-			celsius(c);
+			double cel = celsius(c);
+			System.out.println("The temperature is "+ cel + " degrees celsius.");
 			
 			break;
 			
@@ -41,12 +53,12 @@ public class TempConversion {
 		}		
 		
 		//Method for C to F
-		public static double celsius (double num1) {
+		public static double celsius(double num1) {
 			double f = ((9.0/5.0) * num1 + 32);
 			return f;
 		}	
 		//Method for F to C
-		public static double fahrenheit (double num2) {
+		public static double fahrenheit(double num2) {
 			double c = (5.0/9) *(num2 - 32);
 			return c;
 		}
