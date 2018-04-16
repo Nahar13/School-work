@@ -23,7 +23,7 @@ public class TempConversion {
 		case  1://Prompt for Celsius.
 			System.out.println("Temperature?");
 			double c = input.nextDouble();
-			double cel = celsius(c);
+			celsius(c);
 			
 			break;
 			
